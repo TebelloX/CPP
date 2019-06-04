@@ -3,14 +3,28 @@ using namespace std;
 
 int    main(int argc, char **argv)
 {
+    int j;
     int i;
 
-    i = 0;
     if (argc == 1) {
-        std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-        return (0);
+        std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
     }
-    while ()
-    std::cout << argv[1] << std::endl;
+    else {
+
+        i = 1;
+        while (argv[i]) {
+            
+            j = 0;
+            while (argv[i][j]) {
+
+                if (argv[i][j] == '"')
+                    continue;
+                std::cout << char(toupper(argv[i][j]));
+                j++;
+            }
+            i++;
+        }
+    }
+    std::cout << "\n";
     return (0);
 }
